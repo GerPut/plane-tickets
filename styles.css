@@ -109,26 +109,37 @@ h1 {
     align-items: center;
 }
 
+.seat.open {
+    background-color: grey !important;
+}
+
 .seat.selected {
-    background-color: #238CCC;
+    background-color: #238CCC !important;
 }
 
 .seat.occupied {
-    background-color: #EB409F;
+    background-color: #EB409F !important;
 }
 
 .seat.extra {
-    background-color: #5EC09C;
+    background-color: #5EC09C !important;
 }
 
 .seat.premium {
-    background-color: blue;
-
+    background-color: blue !important;
 }
 
-/* .seat:nth-of-type(5) {
-    margin-left: 10px;
-} */
+.seat:nth-of-type(1) {
+    background-color: blue;
+}
+
+.seat:nth-of-type(11) {
+    background-color: #5EC09C;
+}
+
+.seat:nth-of-type(20) {
+    background-color: #5EC09C;
+}
 
 .seat:not(.occupied):hover {
     cursor: pointer;
@@ -154,4 +165,12 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+/* Countdown */
+.countdown {
+    display: inline-block;
+    border: 2px solid #EB409F;
+    padding: 0 3px;
+    border-radius: 5px;
 }
