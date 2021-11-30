@@ -5,6 +5,10 @@ const total = document.getElementById('total')
 const serviceSelect = document.getElementById('service')
 let ticketPrice = +serviceSelect.value
 
+//  Business and Extra Cost
+function addCost() {
+
+}
 // Update count
 function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected')
@@ -27,12 +31,7 @@ container.addEventListener('click', (e) => {
     }
 })
 
-//  Business and Extra space seats Color change
-function addCost() {
-
-}
-
-// countdown
+// Countdown
 const startingMinutes = 20;
 let time = startingMinutes * 60;
 const countdown = document.getElementById('countdown');

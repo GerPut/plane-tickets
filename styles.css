@@ -48,7 +48,7 @@ h1 {
 }
 
 
-/* Movie */
+/* Plane Seats */
 
 .letter {
     margin: 0;
@@ -90,6 +90,15 @@ h1 {
     border-top-right-radius: 10px;
 }
 
+.extra {
+    background-color: #5EC09C;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .seat-number {
     text-align: center;
     height: 12px;
@@ -109,6 +118,10 @@ h1 {
     align-items: center;
 }
 
+small {
+    font-size: 10px;
+}
+
 .seat.open {
     background-color: grey !important;
 }
@@ -117,12 +130,15 @@ h1 {
     background-color: #238CCC !important;
 }
 
+
+
 .seat.occupied {
     background-color: #EB409F !important;
 }
 
 .seat.extra {
     background-color: #5EC09C !important;
+
 }
 
 .seat.premium {
