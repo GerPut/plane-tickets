@@ -19,7 +19,8 @@
             <ul>
                 <li>Home</li>
                 <li>Flight Status</li>
-                <li>Pay</li>
+                <li>Session Expires:</li>
+                <li id="countdown" class="countdown"></li>
             </ul>
         </div>
     </nav>
@@ -27,7 +28,7 @@
 
     <div class="service-container">
         <label for="">Select a Service:</label>
-        <select name="" id="service">
+        <select id="service">
             <option value="120">Only Food R120</option>
             <option value="100">Only Drinks R100</option>
             <option value="200">Food + Drinks R200</option>
@@ -36,7 +37,7 @@
     <p>Select Your Seat</p>
     <ul class="showcase">
         <li>
-            <div class="seat"></div>
+            <div class="seat open"></div>
             <small>Open</small>
         </li>
         <li>
@@ -60,7 +61,7 @@
     <div class="container">
         <div class="row">
             <p class="letter">A</p>
-            <div style="background-color: blue;" class="seat"></div>
+            <div class="seat" onclick="addCost()" id="premium"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -70,7 +71,7 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -83,7 +84,7 @@
         </div>
         <div class="row">
             <p class="letter">B</p>
-            <div style="background-color: blue;" class="seat"></div>
+            <div class="seat" onclick="addCost()" id="premium2"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -93,7 +94,7 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -102,11 +103,11 @@
             <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
         </div>
         <div class="row">
             <p class="letter">C</p>
-            <div style="background-color: blue;" class="seat"></div>
+            <div class="seat" onclick="addCost()" id="premium3"></div>
             <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat"></div>
@@ -116,7 +117,7 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -125,7 +126,7 @@
             <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
         </div>
         <div class="row">
             <p class="letter">-</p>
@@ -152,7 +153,7 @@
         </div>
         <div class="row">
             <p class="letter">D</p>
-            <div style="background-color: blue;" class="seat"></div>
+            <div class="seat" onclick="addCost()" id="premium4"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -162,7 +163,7 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat occupied"></div>
@@ -171,11 +172,11 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
         </div>
         <div class="row">
             <p class="letter">E</p>
-            <div style="background-color: blue;" class="seat"></div>
+            <div class="seat" onclick="addCost()" id="premium5"></div>
             <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat"></div>
@@ -185,7 +186,7 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -194,11 +195,11 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
         </div>
         <div class="row">
             <p class="letter">F</p>
-            <div style="background-color: blue;" class="seat"></div>
+            <div class="seat" onclick="addCost()" id="premium6"></div>
             <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat"></div>
@@ -208,7 +209,6 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -217,7 +217,8 @@
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat extra"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
         </div>
 
 
