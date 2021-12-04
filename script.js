@@ -9,9 +9,17 @@ let ticketPrice = +serviceSelect.value
 function addCost() {
 
 }
+// Save Service and Price
+function setServiceData(serviceIndex, servicePrice) {
+    localStorage.setItem('selectedServiceIndex', serviceIndex)
+    localStorage.setItem('selectedServicePrice', servicePrice)
+}
+
 // Update count
 function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected')
+    const seatsIndex = [...selectedSeats].map((seat) => [...seats].idexOf(seat))
+    localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex))
     const selectedSeatsCount = selectedSeats.length
     count.innerText = selectedSeatsCount;
     total.innerText = selectedSeatsCount * ticketPrice
@@ -20,6 +28,7 @@ function updateSelectedCount() {
 // Service Click
 serviceSelect.addEventListener('change', e => {
     ticketPrice = +e.target.value
+    setServiceData(e.target.selectedIndex, e.target.value)
     updateSelectedCount()
 })
 
